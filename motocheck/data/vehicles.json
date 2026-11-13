@@ -1,0 +1,154 @@
+{
+  "brands": [
+    {"id": "honda", "name": "Honda"},
+    {"id": "yamaha", "name": "Yamaha"},
+    {"id": "suzuki", "name": "Suzuki"},
+    {"id": "kawasaki", "name": "Kawasaki"},
+    {"id": "other", "name": "Merek lain / tidak tahu"}
+  ],
+  "categories": [
+    {"id": "scooter", "name": "Skutik / scooter"},
+    {"id": "underbone", "name": "Bebek / underbone"},
+    {"id": "sport_fairing", "name": "Sport fairing"},
+    {"id": "naked", "name": "Naked bike"},
+    {"id": "dual_purpose", "name": "Trail / dual-purpose"},
+    {"id": "cruiser_classic", "name": "Cruiser / klasik"},
+    {"id": "other", "name": "Lainnya / tidak tahu"}
+  ],
+  "transmissions": [
+    {"id": "cvt", "name": "Otomatis CVT"},
+    {"id": "automatic_belt", "name": "Otomatis V-Belt (sumber tidak menyebut CVT)"},
+    {"id": "semi_automatic", "name": "Semi-otomatis"},
+    {"id": "manual_clutch", "name": "Manual berkopling"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "brake_types": [
+    {"id": "disc", "name": "Cakram"},
+    {"id": "drum", "name": "Tromol"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "fuel_systems": [
+    {"id": "injection", "name": "Injeksi"},
+    {"id": "carburetor", "name": "Karburator"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "cooling_systems": [
+    {"id": "air", "name": "Pendingin udara"},
+    {"id": "liquid", "name": "Pendingin cairan"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "final_drives": [
+    {"id": "chain", "name": "Rantai"},
+    {"id": "belt", "name": "Sabuk"},
+    {"id": "shaft", "name": "Poros"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "brakes": [
+    {"id": "abs", "name": "ABS"},
+    {"id": "non_abs", "name": "Tanpa ABS"},
+    {"id": "unknown", "name": "Belum dikonfirmasi"}
+  ],
+  "models": [
+    {
+      "id": "yamaha_nmax_turbo",
+      "brand_id": "yamaha",
+      "name": "NMAX TURBO",
+      "source_id": "yamaha_nmax_turbo",
+      "variants": [
+        {
+          "id": "tech_max",
+          "name": "TECH MAX",
+          "configuration": {"transmission": "cvt"}
+        },
+        {
+          "id": "tech_max_ultimate",
+          "name": "TECH MAX ULTIMATE",
+          "configuration": {"transmission": "cvt"}
+        }
+      ],
+      "verified_facts": [
+        "Halaman Yamaha menyebut mesin 155 cc dan YECVT pada NMAX TURBO TECH MAX serta ULTIMATE."
+      ],
+      "year_note": "Tahun model tidak dicantumkan pada halaman produk yang dirujuk."
+    },
+    {
+      "id": "suzuki_gsx_r150",
+      "brand_id": "suzuki",
+      "name": "GSX-R150",
+      "source_id": "suzuki_gsx_r150",
+      "variants": [
+        {
+          "id": "keyless",
+          "name": "Keyless",
+          "configuration": {}
+        },
+        {
+          "id": "abs",
+          "name": "ABS",
+          "configuration": {"brakes": "abs"}
+        }
+      ],
+      "verified_facts": [
+        "Halaman Suzuki menyebut kapasitas mesin 147,3 cc dan menampilkan pilihan Keyless serta ABS."
+      ],
+      "year_note": "Tahun model tidak dicantumkan pada halaman produk yang dirujuk."
+    },
+    {
+      "id": "yamaha_fazzio",
+      "brand_id": "yamaha",
+      "name": "Fazzio",
+      "source_id": "yamaha_fazzio",
+      "configuration": {
+        "category": "scooter",
+        "transmission": "automatic_belt",
+        "fuel_system": "injection",
+        "cooling_system": "air",
+        "front_brake": "disc",
+        "rear_brake": "drum"
+      },
+      "verified_facts": [
+        "Spesifikasi produk menyebut mesin 124,86 cc, pendingin udara, Fuel Injection, dan V-Belt Otomatis.",
+        "Spesifikasi produk menyebut rem depan cakram dan rem belakang tromol.",
+        "Halaman produk mencantumkan lima varian; konfigurasi teknis di atas disajikan pada tingkat model, bukan dibedakan per varian."
+      ],
+      "year_note": "Tahun model tidak ditebak; halaman produk yang dirujuk tidak menetapkan tahun untuk pilihan varian ini.",
+      "variants": [
+        {"id": "special_edition_sunset_blue", "name": "Special Edition Sunset Blue", "configuration": {}},
+        {"id": "special_edition_starry_night", "name": "Special Edition Starry Night", "configuration": {}},
+        {"id": "hybrid_lux", "name": "Hybrid Lux", "configuration": {}},
+        {"id": "hybrid_neo", "name": "Hybrid Neo", "configuration": {}},
+        {"id": "hybrid", "name": "Hybrid", "configuration": {}}
+      ]
+    },
+    {
+      "id": "suzuki_gsx_s150",
+      "brand_id": "suzuki",
+      "name": "GSX-S150",
+      "source_id": "suzuki_gsx_s150",
+      "variants": [
+        {"id": "keyless", "name": "Keyless", "configuration": {}}
+      ],
+      "verified_facts": [
+        "Halaman produk Suzuki mencantumkan GSX-S150 dengan sistem Keyless dan kapasitas 147,3 cc."
+      ],
+      "year_note": "Tahun model tidak dicantumkan pada halaman produk yang dirujuk."
+    },
+    {
+      "id": "honda_beat_street",
+      "brand_id": "honda",
+      "name": "BEAT & BEAT STREET",
+      "source_id": "honda_motopub",
+      "variants": [
+        {"id": "2020", "name": "Tahun model 2020", "year": 2020, "source_id": "honda_beat_street_2020", "configuration": {}},
+        {"id": "2022", "name": "Tahun model 2022", "year": 2022, "source_id": "honda_beat_street_2022", "configuration": {}},
+        {"id": "2024", "name": "Tahun model 2024", "year": 2024, "source_id": "honda_beat_street_2024", "configuration": {}}
+      ],
+      "verified_facts": [
+        "Portal resmi Honda MotoPub mencantumkan entri BEAT & BEAT STREET untuk tahun 2020, 2022, dan 2024.",
+        "Portal daftar model tidak cukup untuk mengonfirmasi konfigurasi teknis; semua konfigurasi tetap belum diketahui."
+      ],
+      "year_note": "Tahun varian mengikuti daftar resmi MotoPub; spesifikasi manual tidak dipakai sebagai bukti karena konten dokumen belum ditinjau."
+    }
+  ],
+  "notice": "Hanya model dan konfigurasi yang tercantum pada sumber resmi disimpan sebagai data terverifikasi. Tahun model yang tidak disebut sumber tetap belum terverifikasi; model lain dapat diisi pengguna tanpa klaim spesifikasi."
+}

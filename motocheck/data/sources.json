@@ -1,0 +1,131 @@
+{
+  "moto_rules": {
+    "title": "Aturan penyaringan awal MotoCheck",
+    "publisher": "MotoCheck",
+    "url": null,
+    "kind": "heuristic",
+    "section": "Heuristik internal; tidak merujuk bagian troubleshooting pabrikan.",
+    "page": null,
+    "content_reviewed": false,
+    "model_year_scope": "Tidak spesifik model atau tahun; bukan dokumen pabrikan.",
+    "note": "Panduan umum — belum tervalidasi untuk model ini. Tidak membuktikan penyebab kerusakan."
+  },
+  "honda_service_publications": {
+    "title": "MotoPub - Service Publications",
+    "publisher": "Honda",
+    "url": "https://www.hondamotopub.com/",
+    "kind": "owner_manual_portal",
+    "note": "Portal resmi Honda untuk publikasi servis seperti owner's manual. Pilih dokumen sesuai model dan tahun; portal ini tidak dipakai sebagai bukti untuk aturan penyaringan MotoCheck."
+  },
+  "yamaha_nmax_turbo": {
+    "title": "NMAX TURBO - Yamaha Motor Indonesia",
+    "publisher": "Yamaha Motor Indonesia",
+    "url": "https://www.yamaha-motor.co.id/product/nmax-turbo/",
+    "kind": "manufacturer_product_page",
+    "section": "Fitur produk",
+    "page": null,
+    "note": "Halaman produk menyebut mesin 155 cc, YECVT, dan varian TECH MAX serta ULTIMATE. Halaman ini tidak mencantumkan tahun model atau seluruh konfigurasi kendaraan."
+  },
+  "suzuki_gsx_r150": {
+    "title": "GSX-R150 - Suzuki Indonesia",
+    "publisher": "Suzuki Indonesia",
+    "url": "https://www.suzuki.co.id/motorcycle/gsx-r150",
+    "kind": "manufacturer_product_page",
+    "section": "Fitur produk dan pilihan varian",
+    "page": null,
+    "note": "Halaman produk menyebut kapasitas 147,3 cc dan pilihan Keyless serta ABS. Halaman ini tidak mencantumkan tahun model atau seluruh konfigurasi kendaraan."
+  },
+  "yamaha_fazzio": {
+    "title": "Fazzio - Yamaha Motor Indonesia",
+    "publisher": "Yamaha Motor Indonesia",
+    "url": "https://www.yamaha-motor.co.id/product/fazzio/",
+    "kind": "manufacturer_product_page",
+    "section": "Specifications: Mesin, Rangka, dan Kelistrikan; Varian & Price",
+    "page": null,
+    "note": "Halaman produk mencantumkan lima varian serta spesifikasi model berupa pendingin udara, Fuel Injection, transmisi V-Belt Otomatis, rem depan cakram, dan rem belakang tromol. Tidak menetapkan tahun untuk pilihan varian."
+  },
+  "suzuki_gsx_s150": {
+    "title": "GSX-S150 - Suzuki Indonesia",
+    "publisher": "Suzuki Indonesia",
+    "url": "https://www.suzuki.co.id/motorcycle/gsx-s150",
+    "kind": "manufacturer_product_page",
+    "section": "Pilihan Warna dan Fitur; 147,3 cc",
+    "page": null,
+    "note": "Halaman produk mencantumkan model GSX-S150, sistem Keyless, dan kapasitas 147,3 cc. Konfigurasi bahan bakar, pendinginan, transmisi, dan rem tidak dimasukkan karena belum diverifikasi dari halaman yang ditinjau."
+  },
+  "honda_motopub": {
+    "title": "Honda MotoPub - Owner's Manual / Parts Catalogue",
+    "publisher": "PT Astra Honda Motor / Honda Motor Co., Ltd.",
+    "url": "https://www.hondamotopub.com/AHJ/",
+    "kind": "owner_manual_portal",
+    "section": "Pencarian model, tahun model, dan dokumen",
+    "page": null,
+    "note": "Portal resmi menampilkan nama model dan tahun untuk pencarian dokumen. Entri katalog hanya memakai data model/tahun yang terlihat; isi manual belum ditinjau dan tidak mendukung aturan diagnosis."
+  },
+  "honda_beat_street_2020": {
+    "title": "Honda MotoPub - BEAT & BEAT STREET 2020",
+    "publisher": "PT Astra Honda Motor / Honda Motor Co., Ltd.",
+    "url": "https://www.hondamotopub.com/model/AHJ/K1A201/",
+    "kind": "owner_manual_portal_record",
+    "section": "Identitas model dan tahun pada portal manual",
+    "page": null,
+    "note": "Portal resmi mencantumkan BEAT & BEAT STREET tahun 2020. Konten dokumen belum ditinjau; konfigurasi teknis dan troubleshooting tidak diklaim."
+  },
+  "honda_beat_street_2022": {
+    "title": "Honda MotoPub - BEAT & BEAT STREET 2022",
+    "publisher": "PT Astra Honda Motor / Honda Motor Co., Ltd.",
+    "url": "https://www.hondamotopub.com/model/AHJ/K1A221/",
+    "kind": "owner_manual_portal_record",
+    "section": "Identitas model dan tahun pada portal manual",
+    "page": null,
+    "note": "Portal resmi mencantumkan BEAT & BEAT STREET tahun 2022. Konten dokumen belum ditinjau; konfigurasi teknis dan troubleshooting tidak diklaim."
+  },
+  "honda_beat_street_2024": {
+    "title": "Honda MotoPub - BEAT & BEAT STREET 2024",
+    "publisher": "PT Astra Honda Motor / Honda Motor Co., Ltd.",
+    "url": "https://www.hondamotopub.com/model/AHJ/K1A240/",
+    "kind": "owner_manual_portal_record",
+    "section": "Identitas model dan tahun pada portal manual",
+    "page": null,
+    "note": "Portal resmi mencantumkan BEAT & BEAT STREET tahun 2024. Konten dokumen belum ditinjau; konfigurasi teknis dan troubleshooting tidak diklaim."
+  },
+  "overpass_manual": {
+    "title": "Overpass API User's Manual",
+    "publisher": "Overpass API",
+    "url": "https://dev.overpass-api.de/overpass-doc/en/",
+    "kind": "service_documentation",
+    "section": "Commons / Public instances",
+    "page": null,
+    "note": "Dokumentasi API dan batas layanan instance publik untuk pencarian data OpenStreetMap."
+  },
+  "osm_tiles": {
+    "title": "Tile Usage Policy",
+    "publisher": "OpenStreetMap Foundation",
+    "url": "https://operations.osmfoundation.org/policies/tiles/",
+    "kind": "service_policy",
+    "note": "Kebijakan penggunaan tile OpenStreetMap dan ketentuan atribusi."
+  },
+  "osm_motorcycle_repair_tag": {
+    "title": "OpenStreetMap Wiki: motorcycle repair tags",
+    "publisher": "OpenStreetMap contributors",
+    "url": "https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair",
+    "kind": "tag_documentation",
+    "note": "Dokumentasi tag shop=motorcycle_repair yang dipakai untuk pencarian; cakupan bergantung pada data yang dipetakan komunitas."
+  },
+  "osm_motorcycle_repair_key": {
+    "title": "OpenStreetMap Wiki: motorcycle:repair",
+    "publisher": "OpenStreetMap contributors",
+    "url": "https://wiki.openstreetmap.org/wiki/Key:motorcycle%3Arepair",
+    "kind": "tag_documentation",
+    "note": "Dokumentasi key motorcycle:repair yang juga dicari bila ditandai pada objek OpenStreetMap."
+  },
+  "overpass_wiki_instances": {
+    "title": "Overpass API - Public instances",
+    "publisher": "OpenStreetMap Wiki contributors",
+    "url": "https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances",
+    "kind": "service_documentation",
+    "section": "Public Overpass API instances",
+    "page": null,
+    "note": "Daftar dan catatan instance publik; kapasitas, ketersediaan, dan kebijakan layanan dapat berubah."
+  }
+}

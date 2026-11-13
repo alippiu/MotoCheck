@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panduan sederhana untuk mengenal sistem utama sepeda motor.">
+    <title>Panduan Otomotif - MotoCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="{{ url_for('home') }}" aria-label="MotoCheck, beranda">
+                <span class="brand-mark" aria-hidden="true">MC</span>
+                <span>MOTO<span class="brand-accent">CHECK</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Navigasi utama">
+                <a href="{{ url_for('home') }}">Pemeriksaan</a>
+                <a class="active" aria-current="page" href="{{ url_for('knowledge') }}">Panduan</a>
+                <a href="{{ url_for('workshop_page') }}">Cari Bengkel</a>
+            </nav>
+            <span class="header-note">FIELD NOTES / 02</span>
+        </header>
+
+        <main class="page">
+            <section class="hero">
+                <p class="eyebrow"><span class="eyebrow-line"></span>Catatan otomotif</p>
+                <h1>Kenali Sistem <span>Motormu.</span></h1>
+                <p class="hero-description">Informasi dasar, gejala terkait, dan langkah aman sebelum berkonsultasi ke mekanik.</p>
+            </section>
+
+            <form class="panel knowledge-filter" action="{{ url_for('knowledge') }}" method="get">
+                <div class="form-grid filter-grid">
+                    <div class="form-field">
+                        <label class="field-label" for="q">Cari topik</label>
+                        <input id="q" name="q" type="search" value="{{ query }}" placeholder="Contoh: aki, rem, CVT">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label" for="kategori">Kategori</label>
+                        <select id="kategori" name="kategori">
+                            <option value="">Semua kategori</option>
+                            {% for category in categories %}
+                                <option value="{{ category }}" {% if selected_category == category %}selected{% endif %}>{{ category }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button class="primary-button" type="submit">Cari panduan <span aria-hidden="true">→</span></button>
+            </form>
+
+            <div class="knowledge-grid">
+                {% for topic in topics %}
+                    <article class="panel knowledge-card">
+                        <p class="section-kicker">{{ topic.category }}</p>
+                        <h2>{{ topic.title }}</h2>
+                        <p>{{ topic.description }}</p>
+                        <h3>Gejala terkait</h3>
+                        <ul class="inline-list">{% for symptom in topic.symptoms %}<li>{{ symptom }}</li>{% endfor %}</ul>
+                        <div class="safe-action"><strong>Langkah aman</strong><p>{{ topic.safe_action }}</p></div>
+                        <details>
+                            <summary>Lihat catatan referensi</summary>
+                            {% for reference in topic.references %}
+                                <p class="source-note">{{ reference.title }} — {{ reference.note }}
+                                {% if reference.url %}<a class="text-link" href="{{ reference.url }}" target="_blank" rel="noopener noreferrer">Buka ↗</a>{% endif %}</p>
+                            {% endfor %}
+                        </details>
+                    </article>
+                {% else %}
+                    <div class="evidence-empty">
+                        <h2>Belum ada panduan yang cocok</h2>
+                        <p>Coba kata pencarian atau kategori lain.</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <span>MotoCheck V2 <span class="footer-divider">/</span> GARAGE</span>
+            <span>Ikuti buku pedoman pemilik untuk kendaraanmu.</span>
+        </footer>
+    </div>
+</body>
+</html>

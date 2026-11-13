@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cari data bengkel motor di OpenStreetMap atau buka pencarian berdasarkan area.">
+    <title>Cari Bengkel - MotoCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="{{ url_for('static', filename='js/workshops.js') }}" defer></script>
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="{{ url_for('home') }}" aria-label="MotoCheck, beranda">
+                <span class="brand-mark" aria-hidden="true">MC</span>
+                <span>MOTO<span class="brand-accent">CHECK</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Navigasi utama">
+                <a href="{{ url_for('home') }}">Pemeriksaan</a>
+                <a href="{{ url_for('knowledge') }}">Panduan</a>
+                <a class="active" aria-current="page" href="{{ url_for('workshop_page') }}">Cari Bengkel</a>
+            </nav>
+            <span class="header-note">SERVICE / 03</span>
+        </header>
+
+        <main class="page workshop-page">
+            <section class="hero">
+                <p class="eyebrow"><span class="eyebrow-line"></span>Pencari bengkel / OpenStreetMap</p>
+                <h1>Temukan Bantuan <span>di Sekitarmu.</span></h1>
+                <p class="hero-description">Lokasi hanya digunakan setelah kamu menekan tombol dan mengizinkan browser. MotoCheck tidak menyimpan lokasi sebagai riwayat; cache wilayah pencarian bersifat sementara.</p>
+            </section>
+
+            {% if urgency == 'stop' %}
+                <div class="safety-notice urgent-notice" role="alert">
+                    <span aria-hidden="true">!</span>
+                    <p><strong>Jangan dikendarai.</strong> Minta bantuan mekanik atau layanan pengangkutan; jangan membawa motor yang tidak aman ke bengkel dengan mengendarainya.</p>
+                </div>
+            {% endif %}
+
+            <section class="panel workshop-search">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Pencarian berdasarkan lokasi</p>
+                        <h2>Bengkel motor terpetakan</h2>
+                    </div>
+                    <span class="step-badge">OSM / SETELAH IZIN</span>
+                </div>
+                <p class="field-hint">
+                    Cari tempat dengan tag bengkel motor di OpenStreetMap dalam radius 5 km. Data mungkin tidak lengkap atau terbaru.
+                    <a class="text-link" href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dmotorcycle_repair" target="_blank" rel="noopener noreferrer">shop=motorcycle_repair ↗</a>
+                    <a class="text-link" href="https://wiki.openstreetmap.org/wiki/Key:motorcycle%3Arepair" target="_blank" rel="noopener noreferrer">motorcycle:repair ↗</a>
+                </p>
+                <button class="primary-button" type="button" data-locate>Gunakan Lokasi Saya <span aria-hidden="true">→</span></button>
+                <p class="search-status" data-status role="status" aria-live="polite">Lokasi belum diminta.</p>
+
+                <div class="map-frame" data-map-frame hidden>
+                    <div id="workshop-map" aria-label="Peta bengkel motor terdekat"></div>
+                    <p class="map-attribution">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></p>
+                </div>
+                <p class="map-fallback" data-map-fallback hidden>Peta interaktif tidak tersedia pada browser ini. Daftar dan tautan lokasi tetap dapat digunakan.</p>
+                <div class="workshop-list" data-results aria-live="polite"></div>
+                <p class="source-note">Data tempat © OpenStreetMap contributors. MotoCheck tidak memverifikasi jam buka, layanan, atau kelengkapan data bengkel. <a class="text-link" href="https://dev.overpass-api.de/overpass-doc/en/" target="_blank" rel="noopener noreferrer">Dokumentasi Overpass API ↗</a></p>
+            </section>
+
+            <section class="panel area-search">
+                <p class="section-kicker">Tanpa izin lokasi</p>
+                <h2>Cari berdasarkan kota atau area</h2>
+                <p class="field-hint">Pencarian area akan membuka Google Maps. MotoCheck tidak mengirim area ke layanan geocoding atau mengarang daftar bengkel.</p>
+                <form data-area-form>
+                    <label class="field-label" for="area">Kota / area</label>
+                    <div class="area-controls">
+                        <input id="area" name="area" maxlength="100" required placeholder="Contoh: Bandung, Jawa Barat">
+                        <button class="secondary-button" type="submit">Cari di Google Maps ↗</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span>MotoCheck V2 <span class="footer-divider">/</span> GARAGE</span>
+            <span><a href="https://operations.osmfoundation.org/policies/tiles/" target="_blank" rel="noopener noreferrer">Kebijakan peta OSM ↗</a></span>
+        </footer>
+    </div>
+</body>
+</html>

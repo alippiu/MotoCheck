@@ -1,0 +1,74 @@
+[
+  {
+    "id": "engine",
+    "category": "Mesin dan pembakaran",
+    "title": "Mesin dan pembakaran",
+    "description": "Mesin mengubah energi bahan bakar menjadi tenaga. Sistem bahan bakar, udara, dan pengapian harus bekerja bersama agar mesin dapat hidup dan berjalan stabil.",
+    "symptoms": ["Motor sulit dihidupkan", "Motor brebet", "Idle tidak stabil", "Tenaga motor hilang"],
+    "safe_action": "Catat kapan gejala terjadi dan pastikan bahan bakar cukup. Hindari menyentuh mesin panas atau membuka saluran bahan bakar.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "transmission",
+    "category": "Transmisi dan penggerak",
+    "title": "CVT, kopling, dan transmisi",
+    "description": "Transmisi menyalurkan tenaga mesin ke roda. Skutik umumnya menggunakan CVT, sementara jenis motor lain dapat memakai transmisi dan penggerak yang berbeda; pastikan konfigurasi melalui buku pedoman kendaraan.",
+    "symptoms": ["Tarikan berat", "Getaran saat akselerasi", "Suara CVT", "Gangguan kopling", "Bunyi rantai"],
+    "safe_action": "Dengarkan dan catat kapan bunyi muncul. Jangan membuka rumah CVT atau menyentuh rantai saat mesin hidup.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "electrical",
+    "category": "Kelistrikan",
+    "title": "Aki dan kelistrikan",
+    "description": "Aki menyediakan daya untuk starter dan perangkat listrik. Gejala pada beberapa perangkat sekaligus dapat menjadi alasan untuk memeriksa sistem kelistrikan.",
+    "symptoms": ["Starter tidak merespons", "Aki lemah", "Lampu redup", "Klakson lemah"],
+    "safe_action": "Amati lampu atau respons starter. Jangan menghubungkan terminal aki atau mengutak-atik kabel terbuka.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "fuel_injection",
+    "category": "Mesin dan pembakaran",
+    "title": "Injeksi dan karburator",
+    "description": "Keduanya merupakan sistem pengaturan bahan bakar dengan prinsip dan perawatan berbeda. MotoCheck tidak menentukan sistem kendaraan dari merek atau model; pilih Belum dikonfirmasi bila tidak mengetahui spesifikasinya.",
+    "symptoms": ["Motor sulit dihidupkan", "Motor brebet", "Indikator injeksi menyala"],
+    "safe_action": "Catat indikator yang menyala dan konsultasikan buku pedoman pemilik. Jangan membongkar komponen atau saluran bahan bakar.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "brakes",
+    "category": "Kaki-kaki dan pengereman",
+    "title": "Sistem pengereman",
+    "description": "Rem membantu mengurangi kecepatan dan menghentikan motor. Gangguan rem tidak aman untuk dinilai hanya dari aplikasi.",
+    "symptoms": ["Rem kurang pakem", "Rem bergetar"],
+    "safe_action": "Jangan mengendarai motor jika rem terasa tidak aman. Minta bantuan mekanik atau layanan pengangkutan.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "cooling",
+    "category": "Pendinginan dan pelumasan",
+    "title": "Pendinginan mesin",
+    "description": "Sistem pendinginan berbeda menurut desain motor. Jika mesin terlalu panas, hentikan penggunaan dan tunggu hingga dingin sebelum pemeriksaan.",
+    "symptoms": ["Mesin cepat panas", "Kebocoran cairan pendingin"],
+    "safe_action": "Jangan membongkar mesin panas atau membuka tutup radiator saat panas. Periksa buku pedoman dan minta bengkel membantu.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "suspension_tires",
+    "category": "Kaki-kaki dan pengereman",
+    "title": "Suspensi, roda, dan ban",
+    "description": "Ban, roda, suspensi, dan kemudi berpengaruh pada kestabilan. Kondisi berbahaya membutuhkan pemeriksaan langsung.",
+    "symptoms": ["Setang bergetar", "Suspensi bermasalah", "Ban aus tidak merata", "Kemudi tidak stabil"],
+    "safe_action": "Amati ban saat motor berhenti. Jangan melanjutkan berkendara bila kendali motor terasa terganggu.",
+    "reference_ids": ["moto_rules"]
+  },
+  {
+    "id": "chain_drive",
+    "category": "Transmisi dan penggerak",
+    "title": "Rantai dan penggerak akhir",
+    "description": "Penggerak akhir meneruskan putaran ke roda belakang. Tipe penggerak dapat berbeda, jadi pastikan dari buku pedoman atau pengamatan langsung, bukan dari merek saja.",
+    "symptoms": ["Bunyi dari rantai", "Tarikan motor terasa berat"],
+    "safe_action": "Matikan mesin sebelum melihat kondisi rantai dari luar. Jangan menyentuh atau menyetel rantai ketika mesin hidup; mintalah bantuan mekanik bila ragu.",
+    "reference_ids": ["moto_rules"]
+  }
+]
